@@ -26,7 +26,7 @@ async function run (runtimeEnv, deployer) {
       type: types.TransactionType.TransferAlgo,
       sign: types.SignType.LogicSignature,
       lsig: masterLogicSig.lsig,
-      fromAccountAddr: master.addr,
+      fromAccountAddr: masterLogicSig.contractAddress,
       toAccountAddr: acc1.addr,
       amountMicroAlgos: 1e6, //1 algo
       payFlags: { totalFee: 1000 },
@@ -39,7 +39,7 @@ async function run (runtimeEnv, deployer) {
       type: types.TransactionType.TransferAlgo,
       sign: types.SignType.LogicSignature,
       lsig: masterLogicSig.lsig,
-      fromAccountAddr: master.addr,
+      fromAccountAddr: masterLogicSig.contractAddress,
       toAccountAddr: acc2.addr,
       amountMicroAlgos: 1e6, //1 algo
       payFlags: { totalFee: 1000 },
