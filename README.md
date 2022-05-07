@@ -23,7 +23,10 @@ yarn install
 1. Copy `.env.example` to `.env`.
 2. Update Algorand Sandbox credentials in `.env` file. You will need 3 accounts for this assignment.
 
-### 3. Use .env file
+### 3. Update `algob.config.js`
+1. Update the account credentials. You will need 3 accounts, `master`, `acc1` and `acc2`.
+
+### 4. Use .env file
 ```
 source .env
 ```
