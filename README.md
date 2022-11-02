@@ -1,4 +1,4 @@
-# PyTeal assignment
+# PyTeal Assignment
 
 In this assignment, you will be tasked to complete the PyTeal stateless program in `artifacts/pyteal_program.py` that checks the transactions performed in `scripts/main.js`.
 
