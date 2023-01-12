@@ -1,4 +1,3 @@
-const { executeTransaction } = require("@algo-builder/algob");
 const { types } = require("@algo-builder/web");
 
 async function run (runtimeEnv, deployer) {
@@ -15,6 +14,7 @@ async function run (runtimeEnv, deployer) {
   
   // create logic sig for sender account
   const masterLogicSig = await deployer.mkDelegatedLsig(
+    "foundryLsig", // can be any name
     "pyteal_program.py",
     master,
     templateParams
@@ -22,7 +22,7 @@ async function run (runtimeEnv, deployer) {
 
   // send Algos to acc1
   console.log("send algos to acc1...")
-  await executeTransaction(deployer, {
+  await deployer.executeTx(deployer, {
       type: types.TransactionType.TransferAlgo,
       sign: types.SignType.LogicSignature,
       lsig: masterLogicSig.lsig,
@@ -35,7 +35,7 @@ async function run (runtimeEnv, deployer) {
 
   // send Algos to acc2
   console.log("send algos to acc2...")
-  await executeTransaction(deployer, {
+  await deployer.executeTx(deployer, {
       type: types.TransactionType.TransferAlgo,
       sign: types.SignType.LogicSignature,
       lsig: masterLogicSig.lsig,
