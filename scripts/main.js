@@ -22,7 +22,7 @@ async function run (runtimeEnv, deployer) {
 
   // send Algos to acc1
   console.log("send algos to acc1...")
-  await deployer.executeTx(deployer, {
+  await deployer.executeTx({
       type: types.TransactionType.TransferAlgo,
       sign: types.SignType.LogicSignature,
       lsig: masterLogicSig.lsig,
@@ -35,7 +35,7 @@ async function run (runtimeEnv, deployer) {
 
   // send Algos to acc2
   console.log("send algos to acc2...")
-  await deployer.executeTx(deployer, {
+  await deployer.executeTx({
       type: types.TransactionType.TransferAlgo,
       sign: types.SignType.LogicSignature,
       lsig: masterLogicSig.lsig,
