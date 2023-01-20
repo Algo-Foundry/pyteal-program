@@ -8,7 +8,7 @@ async function run (runtimeEnv, deployer) {
 
   // supply params to program during compilation - not the same as passing arguments
   const templateParams = {
-    RECEVIER_1: acc1.addr,
+    RECEIVER_1: acc1.addr,
     RECEIVER_2: acc2.addr
   }
   
